@@ -21,6 +21,7 @@ case "$FIRMWARE" in
 	qnap,301w|\
 	redmi,ax6|\
 	xiaomi,ax3600|\
+	xiaomi,ax3600-stock|\
 	xiaomi,ax9000|\
 	yuncore,ax880|\
 	zte,mf269)

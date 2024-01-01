@@ -29,7 +29,8 @@ ipq807x_setup_interfaces()
 	prpl,haze|\
 	redmi,ax6|\
 	spectrum,sax1v1k|\
-	xiaomi,ax3600)
+	xiaomi,ax3600|\
+	xiaomi,ax3600-stock)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" "wan"
 		;;
 	edgecore,eap102|\
@@ -88,9 +89,9 @@ ipq807x_setup_macs()
 		;;
 	esac
 
-	[ -n "$lan_mac" ] && ucidef_set_interface_macaddr "lan" $lan_mac
-	[ -n "$wan_mac" ] && ucidef_set_interface_macaddr "wan" $wan_mac
-	[ -n "$label_mac" ] && ucidef_set_label_macaddr $label_mac
+	[ -n "$lan_mac" ] && ucidef_set_interface_macaddr "lan" "$lan_mac"
+	[ -n "$wan_mac" ] && ucidef_set_interface_macaddr "wan" "$wan_mac"
+	[ -n "$label_mac" ] && ucidef_set_label_macaddr "$label_mac"
 }
 
 board_config_update
